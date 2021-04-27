@@ -1,18 +1,17 @@
 import Express from 'express';
-import { words } from './data/words.js';
+import addressRoutes from './routes/address.js';
+
 const app = Express();
+app.use(Express.json());
+app.use(Express.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
-    res.json(words);
+    res.json({
+        message: 'Please refer to the following list to get your desired data.',
+    });
 });
 
-app.get('/products/:id', (req, res) => {
-    if (words.length < req.params.id) {
-        res.status(404).json({ message: 'Invalid product.' });
-    }
-
-    res.status(200).json(words[req.params.id - 1]);
-});
+app.use('/api/address', addressRoutes);
 
 app.listen('3000', () => {
     console.log('Listening on 3000');
