@@ -13,6 +13,6 @@ app.get('/', (req, res) => {
 
 app.use('/api/address', addressRoutes);
 
-app.listen('3000', () => {
-    console.log('Listening on 3000');
+app.listen('8000', () => {
+    console.log('Listening on 8000');
 });

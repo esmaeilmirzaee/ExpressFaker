@@ -1,10 +1,10 @@
 FROM node:lts-alpine3.13
 
-EXPOSE 8000
-
 RUN apk add --no-cache tini
 
-WORKDIR /usr/src/app/
+EXPOSE 8000
+
+WORKDIR /app
 
 COPY package.json package-lock*.json ./ 
 
@@ -14,5 +14,5 @@ COPY . .
 
 ENTRYPOINT [ "/sbin/tini", "--" ]
 
-CMD ["node", "./index.js"]
+CMD ["node", "index.js"]
 
