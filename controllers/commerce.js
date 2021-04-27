@@ -13,7 +13,7 @@ const commerce = {
     productDescription: faker.commerce.productDescription(),
 };
 
-export const getCommerce = (req, res) => {
+export const getCommerce = async (req, res) => {
     let respond = {};
     if (!req.query.q) {
         res.status(200).json({ commerce });
@@ -57,7 +57,7 @@ export const getCommerce = (req, res) => {
                     };
                     break;
                 default:
-                    res.status(200).json({ commerce });
+                    respond = { ...commerce };
             }
         });
     }

@@ -6,7 +6,7 @@
 ## GET Methods
 
 -   [x] address
--   [] animal
+-   [x] animal
 -   [x] commerce
 -   [] company
 -   [] database
