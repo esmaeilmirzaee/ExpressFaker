@@ -5,6 +5,28 @@
 
 ## GET Methods
 
+-   [x] address
+-   [] animal
+-   [x] commerce
+-   [] company
+-   [] database
+-   [] datatype
+-   [] date
+-   [] finance
+-   [] git
+-   [] hacker
+-   [] helpers
+-   [] image
+-   [] internet
+-   [] lorem
+-   [] mersenne
+-   [] music
+-   [] name
+-   [] phone
+-   [] system
+-   [] time
+-   [] vehicle
+
 ### address
 
 ### commerce
