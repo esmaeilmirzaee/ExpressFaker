@@ -18,7 +18,7 @@
 -   [] helpers
 -   [] image
 -   [] internet
--   [] lorem
+-   [x] lorem
 -   [] mersenne
 -   [] music
 -   [] name
