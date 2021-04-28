@@ -22,19 +22,19 @@ export const getName = async (req, res) => {
     } else {
         req.query.q.split(',').map((q) => {
             switch (q.toLowerCase()) {
-                case 'firstName':
+                case 'firstname':
                     respond = { ...respond, firstName: name.firstName };
                     break;
-                case 'lastName':
+                case 'lastname':
                     respond = { ...respond, lastName: name.lastName };
                     break;
-                case 'middleName':
+                case 'middlename':
                     respond = { ...respond, middleName: name.middleName };
                     break;
-                case 'findName':
+                case 'findname':
                     respond = { ...respond, findName: name.findName };
                     break;
-                case 'jobTitle':
+                case 'jobtitle':
                     respond = { ...respond, jobTitle: name.jobTitle };
                     break;
                 case 'gender':
@@ -49,13 +49,13 @@ export const getName = async (req, res) => {
                 case 'title':
                     respond = { ...respond, title: name.title };
                     break;
-                case 'jobDescriptor':
+                case 'jobdescriptor':
                     respond = { ...respond, jobDescriptor: name.jobDescriptor };
                     break;
-                case 'jobArea':
+                case 'jobarea':
                     respond = { ...respond, jobArea: name.jobArea };
                     break;
-                case 'jobType':
+                case 'jobtype':
                     respond = { ...respond, jobType: name.jobType };
                     break;
                 default:
