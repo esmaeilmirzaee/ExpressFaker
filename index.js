@@ -3,6 +3,7 @@ import addressRoutes from './routes/address.js';
 import commerceRoutes from './routes/commerce.js';
 import animalRoutes from './routes/animal.js';
 import loremRoutes from './routes/lorem.js';
+import nameRoutes from './routes/name.js';
 
 const app = Express();
 app.use(Express.json());
@@ -18,6 +19,8 @@ app.use('/api/address', addressRoutes);
 app.use('/api/commerce', commerceRoutes);
 app.use('/api/animal', animalRoutes);
 app.use('/api/lorem', loremRoutes);
+app.use('/api', nameRoutes);
+app.use('/api', nameRoutes);
 
 app.listen('8000', () => {
     console.log('Listening on 8000');

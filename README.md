@@ -21,7 +21,7 @@
 -   [x] lorem
 -   [] mersenne
 -   [] music
--   [] name
+-   [x] name
 -   [] phone
 -   [] system
 -   [] time
