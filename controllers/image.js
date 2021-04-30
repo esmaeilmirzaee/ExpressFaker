@@ -27,13 +27,31 @@ export const getImage = async (req, res) => {
         ) {
             respond = { [req.query.source]: respond[req.query.source] };
         } else {
-            console.log(
-                Object.keys(respond).includes(req.query.source),
-                respond,
-            );
             respond = { ['unspecified']: respond['unspecified'] };
         }
+    } else {
+        respond = { ['unspecified']: respond['unspecified'] };
     }
+
+    if (req.query.q) {
+        let items = [];
+        req.query.q.split(',').map((item) => {
+            items.push(item);
+        });
+        let tempRespond = {};
+        let sourceName = '';
+        Object.entries(respond).forEach(([key, value]) => {
+            sourceName = key;
+            Object.entries(value).forEach(([k, v]) => {
+                if (items.includes(k)) {
+                    tempRespond = { ...tempRespond, [k]: v };
+                }
+            });
+        });
+        respond = { [sourceName]: tempRespond };
+        console.log(items, tempRespond);
+    }
+
     if (Object.keys(respond) != 0) {
         res.status(200).json({ image: respond });
     } else {
