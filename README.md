@@ -16,7 +16,7 @@
 -   [] git
 -   [] hacker
 -   [] helpers
--   [] image
+-   [x] image
 -   [] internet
 -   [x] lorem
 -   [] mersenne
@@ -26,6 +26,18 @@
 -   [] system
 -   [] time
 -   [] vehicle
+
+## Specific
+
+> If you require more specific faker response you can mix up the available ones, or let us know to put it into the next release, or use the available ones that are listed below.
+
+#### Tweet
+
+##### Tweet message
+
+##### Tweet response / comments
+
+#### User
 
 ### address
 

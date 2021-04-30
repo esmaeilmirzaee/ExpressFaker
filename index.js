@@ -6,6 +6,9 @@ import loremRoutes from './routes/lorem.js';
 import nameRoutes from './routes/name.js';
 import imageRoutes from './routes/image.js';
 
+import tweetsRoutes from './routes/tweets.js';
+import userRoutes from './routes/user.js';
+
 const app = Express();
 app.use(Express.json());
 app.use(Express.urlencoded({ extended: true }));
@@ -23,6 +26,8 @@ app.use('/api/lorem', loremRoutes);
 app.use('/api/name', nameRoutes);
 app.use('/api/image', imageRoutes);
 
+app.use('/api/tweets', tweetsRoutes);
+app.use('/api/user', userRoutes);
 app.listen('8000', () => {
     console.log('Listening on 8000');
 });
