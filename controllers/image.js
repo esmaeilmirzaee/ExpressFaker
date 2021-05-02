@@ -48,7 +48,9 @@ export const getImage = async (req, res) => {
                 }
             });
         });
-        respond = { [sourceName]: tempRespond };
+        if (Object.keys(tempRespond).length != 0) {
+            respond = { [sourceName]: tempRespond };
+        }
         console.log(items, tempRespond);
     }
 
