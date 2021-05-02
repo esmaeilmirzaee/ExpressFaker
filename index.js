@@ -13,9 +13,11 @@ const app = Express();
 app.use(Express.json());
 app.use(Express.urlencoded({ extended: true }));
 
+let port = process.env.PORT || 8000;
+
 app.get('/', (req, res) => {
     res.json({
-        message: 'Please refer to the following list to get your desired data.',
+        message: `Please refer to the following list to get your desired data. Also, use ${port} number.`,
     });
 });
 
@@ -26,9 +28,10 @@ app.use('/api/lorem', loremRoutes);
 app.use('/api/name', nameRoutes);
 app.use('/api/image', imageRoutes);
 
+// Additional
 app.use('/api/tweets', tweetsRoutes);
 app.use('/api/user', userRoutes);
-let port = process.env.PORT || 8000;
+
 app.listen(port, () => {
     console.log(`Listening on ${port}`);
 });

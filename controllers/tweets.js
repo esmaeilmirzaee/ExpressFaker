@@ -4,7 +4,7 @@ import { User } from './user.js';
 
 export const getTweets = async (req, res) => {
     let tweet = new Tweet();
-    res.json({ message: tweet.getTweet() });
+    res.json({ tweet: tweet.getTweet() });
 };
 
 const image = () => {
