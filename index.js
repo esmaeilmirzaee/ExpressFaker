@@ -1,4 +1,6 @@
 import Express from 'express';
+import cors from 'cors';
+
 import addressRoutes from './routes/address.js';
 import commerceRoutes from './routes/commerce.js';
 import animalRoutes from './routes/animal.js';
@@ -12,6 +14,7 @@ import userRoutes from './routes/user.js';
 const app = Express();
 app.use(Express.json());
 app.use(Express.urlencoded({ extended: true }));
+app.use(cors());
 
 let port = process.env.PORT || 8000;
 
