@@ -28,6 +28,6 @@ app.use('/api/image', imageRoutes);
 
 app.use('/api/tweets', tweetsRoutes);
 app.use('/api/user', userRoutes);
-app.listen('8000', () => {
-    console.log('Listening on 8000');
+app.listen('80', () => {
+    console.log('Listening on 80');
 });
