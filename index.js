@@ -28,6 +28,6 @@ app.use('/api/image', imageRoutes);
 
 app.use('/api/tweets', tweetsRoutes);
 app.use('/api/user', userRoutes);
-app.listen('80', () => {
-    console.log('Listening on 80');
+app.listen('443', () => {
+    console.log('Listening on 443');
 });
