@@ -4,6 +4,21 @@ import { User } from './user.js';
 
 export const getTweets = async (req, res) => {
     let tweet = new Tweet();
+    let respond = [];
+    if (req.query.limit) {
+        let limit = req.query.limit < 10 ? req.query.limit : 10;
+        for (var i = 0; i < limit; i++) {
+            respond.push(tweet.getTweet());
+        }
+    } else {
+        respond.push(tweet.getTweet());
+    }
+
+    res.json({ tweets: respond });
+};
+
+export const getTweet = async (req, res) => {
+    let tweet = new Tweet();
     res.json({ tweet: tweet.getTweet() });
 };
 
