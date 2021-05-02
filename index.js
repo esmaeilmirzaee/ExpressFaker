@@ -28,6 +28,7 @@ app.use('/api/image', imageRoutes);
 
 app.use('/api/tweets', tweetsRoutes);
 app.use('/api/user', userRoutes);
-app.listen('443', () => {
-    console.log('Listening on 443');
+let port = process.env.PORT || 8000;
+app.listen(port, () => {
+    console.log(`Listening on ${port}`);
 });
